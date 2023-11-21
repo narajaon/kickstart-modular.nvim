@@ -172,6 +172,7 @@ require('lazy').setup({
     },
   },
 
+  -- Or with configuration
   {
     -- Theme inspired by Atom
     'navarasu/onedark.nvim',
