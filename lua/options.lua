@@ -38,6 +38,6 @@ vim.o.swapfile = false
 
 -- use indent folding
 vim.o.foldmethod = 'indent'
-vim.o.foldlevel = 99
+vim.o.foldlevel = 999
 
 -- vim: ts=2 sts=2 sw=2 et
