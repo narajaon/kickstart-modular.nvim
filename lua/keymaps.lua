@@ -45,12 +45,6 @@ vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
 
--- FS manips
-vim.keymap.set('n', '<leader>df', ':e %/')
-vim.keymap.set('n', '<leader>dd', ':!mkdir %/')
-vim.keymap.set('n', '<leader>dD', ':!rm -rf ')
-vim.keymap.set('n', '<leader>dm', ':!mv ')
-
 -- search and replace with confirmation
 vim.keymap.set({ 'n', 'v' }, '<leader>fw', ':%s/<C-R><C-W>/gc<left><left><left>')
 
@@ -66,7 +60,7 @@ vim.keymap.set('n', '<leader>tn', '<cmd>TestNearest<cr>')
 
 -- dervish
 vim.keymap.set('n', '<leader>df', ':e %/')
-vim.keymap.set('n', '<leader>dd', ':mkdir %/')
+vim.keymap.set('n', '<leader>dd', ':!mkdir %/')
 vim.keymap.set('n', '<leader>dD', ':!rm -rf ')
 vim.keymap.set('n', '<leader>dm', ':!mv  ')
 
@@ -82,16 +76,5 @@ function GetPackageName ()
   local name = string.match(currentPath, packageDirectory .. "/[^/]+")
   return name or ''
 end
-
-function RunTests()
-  require("neotest").run.run({
-    jestConfigFile = function ()
-      return GetPackageName() .. '/jest.config.js'
-    end,
-    cwd = GetPackageName(),
-  })
-end
-
-vim.keymap.set('n', '<leader>tf', '<cmd>lua RunTests()<cr>', {})
 
 -- vim: ts=2 sts=2 sw=2 et

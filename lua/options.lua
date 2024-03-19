@@ -40,4 +40,7 @@ vim.o.swapfile = false
 vim.o.foldmethod = 'indent'
 vim.o.foldlevel = 999
 
+-- set tabstop
+vim.o.tabstop = 2
+
 -- vim: ts=2 sts=2 sw=2 et

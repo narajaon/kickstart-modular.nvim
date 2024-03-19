@@ -93,31 +93,6 @@ require('lazy').setup({
   },
 
   {
-    "nvim-neotest/neotest",
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'antoinemadec/FixCursorHold.nvim',
-      'haydenmeade/neotest-jest'
-    },
-    config = function()
-      require('neotest').setup({
-        icons = {
-          passed = "🟢",
-          running = "🔘",
-          failed = "🔴",
-          skipped = "⚪"
-        },
-        adapters = {
-          require('neotest-jest')({
-            jestCommand = 'yarn test --coverage false',
-            -- env = { CI = true },
-          }),
-        }
-      })
-    end
-  },
-
-  {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     opts = {
