@@ -30,6 +30,9 @@ require('lazy').setup({
   -- Highlight caracters for inline jumps
   'unblevable/quick-scope',
 
+  -- preview rgb / hex colors
+  { 'brenoprata10/nvim-highlight-colors', opts = {} },
+
   -- autopairing
   'jiangmiao/auto-pairs',
 
