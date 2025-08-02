@@ -1,26 +1,26 @@
-local autocmdId = vim.api.nvim_create_augroup("autocmd.lua", { clear = false })
+local autocmdId = vim.api.nvim_create_augroup('autocmd.lua', { clear = false })
 
-vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter", "FocusGained" }, {
-  pattern = "*",
-  command = "OneStatus",
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter', 'FocusGained' }, {
+  pattern = '*',
+  command = 'OneStatus',
   group = autocmdId,
 })
 
-vim.api.nvim_create_autocmd({ "VimLeave" }, {
-  pattern = "*",
-  command = "OneStatusClean",
+vim.api.nvim_create_autocmd({ 'VimLeave' }, {
+  pattern = '*',
+  command = 'OneStatusClean',
   group = autocmdId,
 })
 
-vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "qf", "help", "man" },
-  command = "wincmd L",
+vim.api.nvim_create_autocmd({ 'FileType' }, {
+  pattern = { 'qf', 'help', 'man' },
+  command = 'wincmd L',
   group = autocmdId,
 })
 
-vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = "dirvish",
-  callback = function ()
+vim.api.nvim_create_autocmd({ 'FileType' }, {
+  pattern = 'dirvish',
+  callback = function()
     -- Telescope
     vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
     vim.keymap.set('n', '<leader>fs', '<cmd>Telescope live_grep<cr>')
