@@ -29,8 +29,8 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   group = autocmdId,
 })
 
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-  pattern = { "*.ts", "*.tsx", "*.js", "*.mjs", "*.jsx" },
-  command = "PrettierAsync",
-  group = autocmdId,
-})
+-- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+--   pattern = { "*.ts", "*.tsx", "*.js", "*.mjs", "*.jsx" },
+--   command = "PrettierAsync",
+--   group = autocmdId,
+-- })
