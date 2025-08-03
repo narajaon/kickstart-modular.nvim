@@ -13,6 +13,13 @@ return {
   -- Prettier for autofix on save
   'prettier/vim-prettier',
 
+  {
+    'NMAC427/guess-indent.nvim',
+    config = function()
+      require('guess-indent').setup {}
+    end,
+  },
+
   -- OneStatus
   'narajaon/onestatus',
 
