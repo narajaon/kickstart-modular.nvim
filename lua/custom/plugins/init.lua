@@ -35,9 +35,6 @@ return {
   -- preview rgb / hex colors
   { 'brenoprata10/nvim-highlight-colors', opts = {} },
 
-  -- autopairing
-  'jiangmiao/auto-pairs',
-
   -- Camel to Snek
   'nicwest/vim-camelsnek',
   {
