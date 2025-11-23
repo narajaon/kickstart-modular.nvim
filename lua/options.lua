@@ -61,7 +61,7 @@ vim.o.inccommand = 'split'
 vim.o.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 10
+-- vim.o.scrolloff = 10
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
@@ -71,8 +71,10 @@ vim.o.confirm = true
 -- disable swapfile
 vim.o.swapfile = false
 
--- use indent folding
-vim.o.foldmethod = 'indent'
-vim.o.foldlevel = 999
+-- use treesitter folding
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
 
 -- vim: ts=2 sts=2 sw=2 et
