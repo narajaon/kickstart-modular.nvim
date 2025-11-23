@@ -11,7 +11,7 @@ return {
   'tpope/vim-unimpaired',
 
   -- Prettier for autofix on save
-  'prettier/vim-prettier',
+  -- 'prettier/vim-prettier',
 
   {
     'NMAC427/guess-indent.nvim',
