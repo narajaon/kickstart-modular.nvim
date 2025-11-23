@@ -238,6 +238,14 @@ return {
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+        cucumber_language_server = {
+          settings = {
+            cucumber = {
+              features = { '**/features/**/*.feature' },
+              glue = { '**/steps/**/*.ts' },
+            },
+          },
+        },
 
         lua_ls = {
           -- cmd = { ... },
